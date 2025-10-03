@@ -1,6 +1,6 @@
 body {
     /* Menggunakan warna yang sangat gelap/navy untuk latar belakang */
-    background-color: #0c0e1b; 
+    background-color: #6A0DAD; 
     color: #f1f5f9; /* Warna teks utama terang */
     font-family: ui-sans-serif, system-ui, sans-serif; 
     display: flex; /* Untuk memposisikan main content di tengah */
@@ -15,7 +15,7 @@ main {
     max-width: 600px; /* Batasi lebar kontainer utama */
     width: 95%;
     /* Warna latar belakang kontainer, lebih terang dari body */
-    background-color: #1f2336; 
+    background-color: #A074D0; 
     padding: 30px;
     border-radius: 12px;
     /* Bayangan untuk efek kedalaman */
