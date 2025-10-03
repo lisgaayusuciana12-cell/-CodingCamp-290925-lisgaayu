@@ -5,14 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo - lisga</title>
-    <!-- CSS External -->
-    <link rel="stylesheet" href="styles.css">
-</head>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
 
 <body>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <main>
+        <header class="mb-6">
+            <h1 class="text-3xl font-extrabold text-white text-center">Todo List</h1> 
+        </header>
+
+        <section class="mb-6">
+            <form id="todo-form" class="flex items-center gap-2">
+                <input type="text" 
+                       class="flex-grow bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500" 
+                       id="todo-input" 
+                       placeholder="Add a todo..." 
+                       required>
+                
+                <input type="date" 
+                       class="w-32 bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white focus:ring-blue-500 focus:border-blue-500" 
+                       id="todo-date" 
+                       required>
+                
+                <button type="submit" 
+                        class="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-md flex items-center justify-center text-xl p-0">
+                    +
+                </button>
+            </form>
+        </section>
+
+<section class="mb-4 flex justify-between">
+    <select id="filter-select" onchange="filterTodo()" class="bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white font-semibold text-sm shadow-md cursor-pointer">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+    </select>
+    <button id="delete-all-btn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md uppercase text-sm shadow-md">
+        Delete All
+    </button>
+</section>
+
+        <section class="mt-[16px] bg-gray-800 p-4 rounded-lg shadow-inner">
+           <div class="grid grid-cols-4 gap-4 text-xs font-semibold uppercase text-gray-400 border-b border-gray-700 pb-2 mb-2">
+             <span class="col-span-1">TASK</span>
+             <span class="col-span-1">DUE DATE</span>
+             <span class="col-span-1">STATUS</span>
+             <span class="col-span-1 text-right">ACTIONS</span>
+           </div>
     
+    <ul id="todo-list" class="space-y-3">
+        <p id="empty-message" class="text-center text-gray-400 py-4">No task found</p>
+        </ul> 
+</section>
+
+        </main>
+    
+    <footer class="mt-8 text-center text-gray-500 text-sm w-full absolute bottom-4">
+        <p>&copy; 2025 Lisga Todo App</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>

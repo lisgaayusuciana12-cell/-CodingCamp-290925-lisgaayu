@@ -1,0 +1,23 @@
+body {
+    /* Menggunakan warna yang sangat gelap/navy untuk latar belakang */
+    background-color: #0c0e1b; 
+    color: #f1f5f9; /* Warna teks utama terang */
+    font-family: ui-sans-serif, system-ui, sans-serif; 
+    display: flex; /* Untuk memposisikan main content di tengah */
+    justify-content: center;
+    align-items: flex-start; /* Konten dimulai dari atas */
+    min-height: 100vh;
+    padding-top: 50px; /* Jarak dari atas */
+}
+
+/* Mengatur ukuran dan tata letak kontainer utama (main) */
+main {
+    max-width: 600px; /* Batasi lebar kontainer utama */
+    width: 95%;
+    /* Warna latar belakang kontainer, lebih terang dari body */
+    background-color: #1f2336; 
+    padding: 30px;
+    border-radius: 12px;
+    /* Bayangan untuk efek kedalaman */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+}
